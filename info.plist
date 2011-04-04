@@ -4,7 +4,13 @@
 <dict>
 	<key>name</key>
 	<string>Jekyll</string>
+	<key>ordering</key>
+	<array>
+		<string>B6A7C3A7-CA27-4842-A882-4F16C30D1EAE</string>
+		<string>63E974A6-29C1-4FF8-A290-E07C3F5651BC</string>
+		<string>95B0B966-4F18-4477-8DA3-0366235541ED</string>
+	</array>
 	<key>uuid</key>
-	<string>2D7F0C50-36F7-444E-9808-D7530B9DE18B</string>
+	<string>8B52A0A5-2229-44A5-BE86-733BA055CA8C</string>
 </dict>
 </plist>

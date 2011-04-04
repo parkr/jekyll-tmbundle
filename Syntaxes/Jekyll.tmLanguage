@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>fileTypes</key>
+	<array>
+		<string>markdown</string>
+		<string>md</string>
+		<string>html</string>
+	</array>
+	<key>firstLineMatch</key>
+	<string>---</string>
+	<key>name</key>
+	<string>Jekyll</string>
+	<key>patterns</key>
+	<array>
+		<dict>
+			<key>include</key>
+			<string>text.html.markdown</string>
+		</dict>
+	</array>
+	<key>scopeName</key>
+	<string>text.html.markdown.jekyll</string>
+	<key>uuid</key>
+	<string>95B0B966-4F18-4477-8DA3-0366235541ED</string>
+</dict>
+</plist>

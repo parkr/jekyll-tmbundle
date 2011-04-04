@@ -3,19 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>beforeRunningCommand</key>
-	<string>saveModifiedFiles</string>
+	<string>nop</string>
 	<key>command</key>
-	<string>cd $TM_PROJECT_DIRECTORY
-jekyll</string>
+	<string>cd $TM_PROJECT_DIRECTORY &amp;&amp; jekyll
+</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>^@b</string>
+	<string>@b</string>
 	<key>name</key>
-	<string>Build with Jekyll</string>
+	<string>Build site</string>
 	<key>output</key>
-	<string>showAsTooltip</string>
+	<string>discard</string>
+	<key>scope</key>
+	<string>text.html.markdown.jekyll</string>
 	<key>uuid</key>
-	<string>5A50F811-F20C-4890-B289-7837395FB05E</string>
+	<string>B6A7C3A7-CA27-4842-A882-4F16C30D1EAE</string>
 </dict>
 </plist>
