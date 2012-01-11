@@ -15,6 +15,89 @@
 	<key>patterns</key>
 	<array>
 		<dict>
+			<key>begin</key>
+			<string>(---[ ]*\n)</string>
+			<key>end</key>
+			<string>(---[ ]*\n)</string>
+			<key>name</key>
+			<string>source.yaml.header.markdown.jekyll</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.yaml</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\{% +highlight +(js)( +linenos)? +%\}</string>
+			<key>end</key>
+			<string>\{% +endhighlight +%\}\n</string>
+			<key>name</key>
+			<string>source.$1.embedded.html.markdown</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.js</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>\{% +highlight +(python)( +linenos)? +%\}\n</string>
+			<key>end</key>
+			<string>\{% +endhighlight +%\}\n</string>
+			<key>name</key>
+			<string>source.$1.embedded.html.markdown</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>source.python</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
+			<string>(\{% +(highlight) +(html)( +(linenos))? +%\})\n</string>
+			<key>captures</key>
+			<dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>meta.tag.liquid</string>
+				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.tag.highlight.liquid</string>
+				</dict>
+				<key>3</key>
+				<dict>
+					<key>name</key>
+					<string>entity.other.attribute.language</string>
+				</dict>
+				<key>5</key>
+				<dict>
+					<key>name</key>
+					<string>entity.other.attribute.other</string>
+				</dict>
+			</dict>
+			<key>contentName</key>
+			<string>source.$2.embedded.html.markdown</string>
+			<key>end</key>
+			<string>(\{% +(endhighlight) +%\})\n</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>text.html.basic</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
 			<key>include</key>
 			<string>text.html.markdown</string>
 		</dict>
