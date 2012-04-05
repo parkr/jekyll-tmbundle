@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>{% highlight ${1:ruby} %}
+	<string>{% highlight ${1:javascript} %}
 $2
 {% endhighlight %}</string>
 	<key>name</key>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>nop</string>
+	<key>command</key>
+	<string>cd $TM_PROJECT_DIRECTORY
+
+title=$(CocoaDialog standard-inputbox \
+ --title "New Post" \
+ --informative-text "Title of the new post:")
+
+[[ $(head -n1 &lt;&lt;&lt;"$title") == "2" ]] &amp;&amp; exit_discard
+
+title=$(tail -n1 &lt;&lt;&lt;"$title")
+
+output=$(rake post title="$title")
+
+expr="^\(in (.*)\) Creating new post: (.*)$"
+
+if [[ $output =~ $expr ]]; then
+   	project=${BASH_REMATCH[1]}
+	post=${BASH_REMATCH[2]}
+	echo "new post file created at $post"
+	exit_show_tool_tip
+else
+   	echo "Error"
+	exit_show_tool_tip
+fi</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>@n</string>
+	<key>name</key>
+	<string>New Post</string>
+	<key>output</key>
+	<string>showAsTooltip</string>
+	<key>scope</key>
+	<string>text.html.markdown.jekyll</string>
+	<key>uuid</key>
+	<string>FB00DEAE-BC80-4737-BD7F-94B5226658E4</string>
+</dict>
+</plist>
