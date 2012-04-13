@@ -5,7 +5,10 @@
 	<key>beforeRunningCommand</key>
 	<string>nop</string>
 	<key>command</key>
-	<string>cd $TM_PROJECT_DIRECTORY
+	<string>[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; . "$HOME/.rvm/scripts/rvm" # Load RVM function
+
+cd $TM_PROJECT_DIRECTORY
 
 title=$(CocoaDialog standard-inputbox \
  --title "New Post" \
@@ -15,14 +18,14 @@ title=$(CocoaDialog standard-inputbox \
 
 title=$(tail -n1 &lt;&lt;&lt;"$title")
 
-output=$(rake post title="$title")
+output=$(rake post[$title])
 
-expr="^\(in (.*)\) Creating new post: (.*)$"
+expr="^Creating new post: (.*)$"
 
 if [[ $output =~ $expr ]]; then
-   	project=${BASH_REMATCH[1]}
-	post=${BASH_REMATCH[2]}
+	post=${BASH_REMATCH[1]}
 	echo "new post file created at $post"
+     rescan_project
 	exit_show_tool_tip
 else
    	echo "Error"
