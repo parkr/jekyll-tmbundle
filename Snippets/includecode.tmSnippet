@@ -3,16 +3,14 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>{% codeblock ${1:title} lang:${2:js}%}
-$3
-{% endcodeblock %}</string>
+	<string>{% include_code ${1:title} lang:${2:js} ${3:https://raw.github.com/timnew/...} %}</string>
 	<key>name</key>
-	<string>codeblock</string>
+	<string>includecode</string>
 	<key>scope</key>
 	<string>text.html.markdown.jekyll</string>
 	<key>tabTrigger</key>
-	<string>code</string>
+	<string>include</string>
 	<key>uuid</key>
-	<string>766838CA-BA4F-436B-824F-3F56C8CE8DE1</string>
+	<string>40362F37-8844-44BE-9854-4032CB2E6690</string>
 </dict>
 </plist>

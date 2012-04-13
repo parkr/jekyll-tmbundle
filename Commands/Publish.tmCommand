@@ -10,18 +10,18 @@
 
 cd $TM_PROJECT_DIRECTORY
 
-rake generate</string>
+rake publish</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>@b</string>
+	<string>^~@p</string>
 	<key>name</key>
-	<string>Build site</string>
+	<string>Publish</string>
 	<key>output</key>
 	<string>showAsTooltip</string>
 	<key>scope</key>
 	<string>text.html.markdown.jekyll</string>
 	<key>uuid</key>
-	<string>B6A7C3A7-CA27-4842-A882-4F16C30D1EAE</string>
+	<string>D471F68F-D1B8-4D88-8FAC-A7E38149994D</string>
 </dict>
 </plist>

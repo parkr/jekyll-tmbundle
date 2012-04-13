@@ -3,16 +3,16 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>{% highlight ${1:javascript} %}
-$2
-{% endhighlight %}</string>
+	<string>{% blockquote ${1:author} ${2:,source || url [source_link_title]} %}
+$3
+{% endblockquote %}</string>
 	<key>name</key>
-	<string>highlight</string>
+	<string>quote</string>
 	<key>scope</key>
 	<string>text.html.markdown.jekyll</string>
 	<key>tabTrigger</key>
-	<string>high</string>
+	<string>quote</string>
 	<key>uuid</key>
-	<string>E0D3E4B1-95DA-4A6F-B8A2-4C0F84564FF7</string>
+	<string>C0B7D6E0-475A-4ECD-A130-3EC7D7EC8949</string>
 </dict>
 </plist>
