@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveModifiedFiles</string>
+	<key>command</key>
+	<string>cd $TM_PROJECT_DIRECTORY
+
+echo "cd $TM_PROJECT_DIRECTORY" &gt; run_preview
+echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; source "$HOME/.rvm/scripts/rvm"' &gt;&gt; run_preview
+echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; . "$HOME/.rvm/scripts/rvm"' &gt;&gt; run_preview
+echo "rake preview" &gt;&gt; run_preview
+#echo "rm -f run_preview" &gt;&gt; run_preview
+
+chmod +x run_preview 
+open -a Terminal.app ./run_preview
+
+open "http://localhost:4000"
+echo preview deamon is running…
+
+ </string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>@B</string>
+	<key>name</key>
+	<string>Monitor &amp; Build Site</string>
+	<key>output</key>
+	<string>showAsTooltip</string>
+	<key>scope</key>
+	<string>text.html.markdown.jekyll</string>
+	<key>uuid</key>
+	<string>C828D26B-D900-4E45-9901-8DE71F9C2B9B</string>
+</dict>
+</plist>

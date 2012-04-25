@@ -5,12 +5,16 @@
 	<key>beforeRunningCommand</key>
 	<string>saveModifiedFiles</string>
 	<key>command</key>
-	<string>[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; . "$HOME/.rvm/scripts/rvm" # Load RVM function
+	<string>cd $TM_PROJECT_DIRECTORY
 
-cd $TM_PROJECT_DIRECTORY
+echo "cd $TM_PROJECT_DIRECTORY" &gt; build_site
+echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; source "$HOME/.rvm/scripts/rvm"' &gt;&gt; build_site
+echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; . "$HOME/.rvm/scripts/rvm"' &gt;&gt; build_site
+echo "rake publish" &gt;&gt; build_site
+echo "rm -f build_site"
 
-rake publish</string>
+chmod +x build_site
+open -a Terminal.app build_site</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
@@ -18,7 +22,7 @@ rake publish</string>
 	<key>name</key>
 	<string>Publish</string>
 	<key>output</key>
-	<string>showAsTooltip</string>
+	<string>discard</string>
 	<key>scope</key>
 	<string>text.html.markdown.jekyll</string>
 	<key>uuid</key>

@@ -5,24 +5,18 @@
 	<key>beforeRunningCommand</key>
 	<string>saveModifiedFiles</string>
 	<key>command</key>
-	<string>[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; . "$HOME/.rvm/scripts/rvm" # Load RVM function
-
-cd $TM_PROJECT_DIRECTORY
-
-rake generate
-</string>
+	<string>open "http://localhost:4000"</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>@b</string>
+	<string>@p</string>
 	<key>name</key>
-	<string>Build Site</string>
+	<string>Preview</string>
 	<key>output</key>
-	<string>showAsTooltip</string>
+	<string>discard</string>
 	<key>scope</key>
 	<string>text.html.markdown.jekyll</string>
 	<key>uuid</key>
-	<string>B6A7C3A7-CA27-4842-A882-4F16C30D1EAE</string>
+	<string>F8D586BA-42AF-4C62-A5C5-BD643CCB5741</string>
 </dict>
 </plist>
