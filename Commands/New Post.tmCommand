@@ -18,7 +18,7 @@ title=$(CocoaDialog standard-inputbox \
 
 title=$(tail -n1 &lt;&lt;&lt;"$title")
 
-output=$(rake post[$title])
+output=$(rake post["$title"])
 
 expr="^Creating new post: (.*)$"
 
