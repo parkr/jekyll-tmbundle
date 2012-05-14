@@ -7,18 +7,16 @@
 	<key>command</key>
 	<string>cd $TM_PROJECT_DIRECTORY
 
-echo "cd $TM_PROJECT_DIRECTORY" &gt; run_preview
-echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; source "$HOME/.rvm/scripts/rvm"' &gt;&gt; run_preview
-echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; . "$HOME/.rvm/scripts/rvm"' &gt;&gt; run_preview
-echo "rake preview" &gt;&gt; run_preview
-#echo "rm -f run_preview" &gt;&gt; run_preview
+echo "cd $TM_PROJECT_DIRECTORY" &gt; /tmp/run_preview
+echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; source "$HOME/.rvm/scripts/rvm"' &gt;&gt; /tmp/run_preview
+echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; . "$HOME/.rvm/scripts/rvm"' &gt;&gt; /tmp/run_preview
+echo "rake preview" &gt;&gt; /tmp/run_preview
+echo "rm -f /tmp/run_preview" &gt;&gt; /tmp/run_preview
 
-chmod +x run_preview 
-open -a Terminal.app ./run_preview
+chmod +x /tmp/run_preview
+open -a Terminal.app /tmp/run_preview
 
-open "http://localhost:4000"
 echo preview deamon is running…
-
  </string>
 	<key>input</key>
 	<string>none</string>

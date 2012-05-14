@@ -7,14 +7,14 @@
 	<key>command</key>
 	<string>cd $TM_PROJECT_DIRECTORY
 
-echo "cd $TM_PROJECT_DIRECTORY" &gt; build_site
-echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; source "$HOME/.rvm/scripts/rvm"' &gt;&gt; build_site
-echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; . "$HOME/.rvm/scripts/rvm"' &gt;&gt; build_site
-echo "rake publish" &gt;&gt; build_site
-echo "rm -f build_site"
+echo "cd $TM_PROJECT_DIRECTORY" &gt; /tmp/build_site
+echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; source "$HOME/.rvm/scripts/rvm"' &gt;&gt; /tmp/build_site
+echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; . "$HOME/.rvm/scripts/rvm"' &gt;&gt; /tmp/build_site
+echo "rake publish" &gt;&gt; /tmp/build_site
+echo "rm -f /tmp/build_site" &gt;&gt; /tmp/build_site
 
-chmod +x build_site
-open -a Terminal.app build_site</string>
+chmod +x /tmp/build_site
+open -a Terminal.app /tmp/build_site</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
@@ -22,7 +22,7 @@ open -a Terminal.app build_site</string>
 	<key>name</key>
 	<string>Publish</string>
 	<key>output</key>
-	<string>discard</string>
+	<string>showAsTooltip</string>
 	<key>scope</key>
 	<string>text.html.markdown.jekyll</string>
 	<key>uuid</key>
