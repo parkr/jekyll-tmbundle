@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>{% img ${1:class} ${2:path} ${3:width height} ${4:title} %}</string>
+	<key>name</key>
+	<string>image</string>
+	<key>scope</key>
+	<string>text.html.markdown.jekyll</string>
+	<key>tabTrigger</key>
+	<string>img</string>
+	<key>uuid</key>
+	<string>714054A6-658D-4FC3-AB63-B8C3995BE336</string>
+</dict>
+</plist>

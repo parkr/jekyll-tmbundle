@@ -1,15 +1,11 @@
 # Jekyll.tmbundle
 
-This bundle provides dead simple support for Jekyll in TextMate. A language
-file is included which should identify HTML or Markdown files with
-[YAML Front Matter](https://github.com/mojombo/jekyll/wiki/yaml-front-matter).
-
-A template is included for a blank blog post; create a new file from the
-`Jekyll` template. Build your site with **&#8984;+B**
-
-
+This TextMate bundle is fully customized for Octopress, a blog engine based on jekyll.
+It provides a group of snippets for Octopress Tags, such as codeblock, gist, etc.
+And it provides several powerfull commands, which can build, launch jekyll or publish blog directly from TextMate.
+ 
 ## Installation
 
-    % git clone git://github.com/itspriddle/jekyll-tmbundle.git ~/Library/Application\ Support/TextMate/Bundles/Jekyll.tmbundle
+    % git clone git://github.com/timnew/jekyll-tmbundle.git ~/Library/Application\ Support/TextMate/Bundles/Jekyll.tmbundle
     % osascript -e 'tell app "TextMate" to reload bundles'
 

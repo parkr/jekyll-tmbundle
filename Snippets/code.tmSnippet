@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>{% codeblock ${1:title} lang:${2:js}%}
+$3
+{% endcodeblock %}</string>
+	<key>name</key>
+	<string>codeblock</string>
+	<key>scope</key>
+	<string>text.html.markdown.jekyll</string>
+	<key>tabTrigger</key>
+	<string>code</string>
+	<key>uuid</key>
+	<string>766838CA-BA4F-436B-824F-3F56C8CE8DE1</string>
+</dict>
+</plist>

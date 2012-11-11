@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>beforeRunningCommand</key>
+	<string>saveModifiedFiles</string>
+	<key>command</key>
+	<string>cd $TM_PROJECT_DIRECTORY
+
+echo "cd $TM_PROJECT_DIRECTORY" &gt; /tmp/build_site
+echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; source "$HOME/.rvm/scripts/rvm"' &gt;&gt; /tmp/build_site
+echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; . "$HOME/.rvm/scripts/rvm"' &gt;&gt; /tmp/build_site
+echo "rake publish" &gt;&gt; /tmp/build_site
+echo "rm -f /tmp/build_site" &gt;&gt; /tmp/build_site
+
+chmod +x /tmp/build_site
+open -a Terminal.app /tmp/build_site</string>
+	<key>input</key>
+	<string>none</string>
+	<key>keyEquivalent</key>
+	<string>^~@p</string>
+	<key>name</key>
+	<string>Publish</string>
+	<key>output</key>
+	<string>showAsTooltip</string>
+	<key>scope</key>
+	<string>text.html.markdown.jekyll</string>
+	<key>uuid</key>
+	<string>D471F68F-D1B8-4D88-8FAC-A7E38149994D</string>
+</dict>
+</plist>

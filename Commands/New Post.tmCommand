@@ -3,26 +3,45 @@
 <plist version="1.0">
 <dict>
 	<key>beforeRunningCommand</key>
-	<string>saveModifiedFiles</string>
+	<string>nop</string>
 	<key>command</key>
 	<string>[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
 [[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; . "$HOME/.rvm/scripts/rvm" # Load RVM function
 
 cd $TM_PROJECT_DIRECTORY
 
-rake generate
-</string>
+title=$(CocoaDialog standard-inputbox \
+ --title "New Post" \
+ --informative-text "Title of the new post:")
+
+[[ $(head -n1 &lt;&lt;&lt;"$title") == "2" ]] &amp;&amp; exit_discard
+
+title=$(tail -n1 &lt;&lt;&lt;"$title")
+
+output=$(rake post["$title"])
+
+expr="^Creating new post: (.*)$"
+
+if [[ $output =~ $expr ]]; then
+	post=${BASH_REMATCH[1]}
+	echo "new post file created at $post"
+     rescan_project
+	exit_show_tool_tip
+else
+   	echo "Error"
+	exit_show_tool_tip
+fi</string>
 	<key>input</key>
 	<string>none</string>
 	<key>keyEquivalent</key>
-	<string>@b</string>
+	<string>@n</string>
 	<key>name</key>
-	<string>Build Site</string>
+	<string>New Post</string>
 	<key>output</key>
 	<string>showAsTooltip</string>
 	<key>scope</key>
 	<string>text.html.markdown.jekyll</string>
 	<key>uuid</key>
-	<string>B6A7C3A7-CA27-4842-A882-4F16C30D1EAE</string>
+	<string>FB00DEAE-BC80-4737-BD7F-94B5226658E4</string>
 </dict>
 </plist>
