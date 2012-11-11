@@ -10,6 +10,8 @@
 	</array>
 	<key>firstLineMatch</key>
 	<string>---</string>
+	<key>keyEquivalent</key>
+	<string>^~J</string>
 	<key>name</key>
 	<string>Jekyll</string>
 	<key>patterns</key>
