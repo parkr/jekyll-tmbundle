@@ -10,7 +10,7 @@
 echo "cd $TM_PROJECT_DIRECTORY" &gt; /tmp/run_preview
 echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; source "$HOME/.rvm/scripts/rvm"' &gt;&gt; /tmp/run_preview
 echo '[[ -s "$HOME/.rvm/scripts/rvm" ]] &amp;&amp; . "$HOME/.rvm/scripts/rvm"' &gt;&gt; /tmp/run_preview
-echo "rake preview" &gt;&gt; /tmp/run_preview
+echo "jekyll serve -w" &gt;&gt; /tmp/run_preview
 echo "rm -f /tmp/run_preview" &gt;&gt; /tmp/run_preview
 
 chmod +x /tmp/run_preview

@@ -10,7 +10,7 @@
 
 cd $TM_PROJECT_DIRECTORY
 
-rake generate
+jekyll build
 </string>
 	<key>input</key>
 	<string>none</string>
